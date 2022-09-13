@@ -11,12 +11,12 @@ COPY . /go/src/user_service
 WORKDIR /go/src/user_service
 RUN make build
 
-# 2 шаг - создание контейнера для запуска
+# Step 2 - application image
 FROM debian:buster-slim
 WORKDIR /app
 COPY --from=build /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/
 COPY --from=build /go/src/user_service/bin/user_service /app/
 COPY --from=build /go/src/user_service/scripts/wait-for-it.sh /app/
 RUN chmod +x /app/*
-EXPOSE 8080/tcp
+#EXPOSE 8080/tcp
 CMD /app/user_service
