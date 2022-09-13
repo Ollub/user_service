@@ -2,15 +2,16 @@ package middleware
 
 import (
 	"net/http"
-	"user_service/internal/session"
+
+	"github.com/Ollub/user_service/internal/session"
 )
 
 const AutenticationHeader = "x-authentication-token"
 
 var (
 	noAuthUrls = map[string]struct{}{
-		"/register": struct{}{},
-		"/login":    struct{}{},
+		"/register": {},
+		"/login":    {},
 	}
 )
 

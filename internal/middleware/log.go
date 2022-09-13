@@ -6,7 +6,8 @@ import (
 	"math/rand"
 	"net/http"
 	"time"
-	"user_service/pkg/log"
+
+	"github.com/Ollub/user_service/pkg/log"
 )
 
 const RequestIDKey = "requestID"

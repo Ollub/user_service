@@ -1,4 +1,4 @@
-module user_service
+module github.com/Ollub/user_service
 
 go 1.18
 

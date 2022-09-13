@@ -6,7 +6,8 @@ import (
 	"regexp"
 	"strings"
 	"unicode"
-	"user_service/internal/users"
+
+	"github.com/Ollub/user_service/internal/users"
 )
 
 const PASS_MIN_LENGTH = 5
@@ -62,24 +63,6 @@ type PassVerifier struct {
 	containUpper   bool
 	containSpecial bool
 }
-
-//type Rule func(l rune) bool
-//
-//func MinLengthRule(min int) Rule {
-//	cnt := 0
-//	return func(l rune) bool {
-//		cnt ++
-//		return cnt >= min
-//	}
-//}
-//
-//func MinLengthRule(min int) Rule {
-//	cnt := 0
-//	return func(l rune) bool {
-//		cnt ++
-//		return cnt >= min
-//	}
-//}
 
 func NewPassVerifier(password string) *PassVerifier {
 	return &PassVerifier{password: password, minLength: PASS_MIN_LENGTH}

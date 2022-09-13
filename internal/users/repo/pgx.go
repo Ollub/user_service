@@ -3,7 +3,8 @@ package repo
 import (
 	"context"
 	"database/sql"
-	"user_service/internal/users"
+
+	"github.com/Ollub/user_service/internal/users"
 )
 
 type RepoPgx struct {
@@ -101,14 +102,3 @@ func (repo *RepoPgx) Update(ctx context.Context, u *users.User) (int64, error) {
 	}
 	return result.RowsAffected()
 }
-
-//func (repo *RepoPgx) Delete(id int64) (int64, error) {
-//	result, err := repo.DB.Exec(
-//		"DELETE FROM items WHERE id = $1",
-//		id,
-//	)
-//	if err != nil {
-//		return 0, err
-//	}
-//	return result.RowsAffected()
-//}

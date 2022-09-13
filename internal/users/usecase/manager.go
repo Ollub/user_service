@@ -3,9 +3,10 @@ package usecase
 import (
 	"context"
 	"fmt"
-	"user_service/internal/users"
-	"user_service/pkg/log"
-	"user_service/pkg/utils/password"
+
+	"github.com/Ollub/user_service/internal/users"
+	"github.com/Ollub/user_service/pkg/log"
+	"github.com/Ollub/user_service/pkg/utils/password"
 )
 
 type Repo interface {

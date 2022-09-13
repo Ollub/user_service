@@ -5,12 +5,13 @@ import (
 	"errors"
 	"fmt"
 	"time"
-	"user_service/internal/users"
-	"user_service/internal/users/usecase"
-	"user_service/pkg/log"
-	"user_service/pkg/utils"
 
-	jwt "github.com/dgrijalva/jwt-go"
+	"github.com/Ollub/user_service/internal/users"
+	"github.com/Ollub/user_service/internal/users/usecase"
+	"github.com/Ollub/user_service/pkg/log"
+	"github.com/Ollub/user_service/pkg/utils"
+
+	"github.com/dgrijalva/jwt-go"
 )
 
 var AuthError = errors.New("authentication error")
@@ -42,10 +43,6 @@ func (sm *SessionsJWTVer) parseSecretGetter(token *jwt.Token) (interface{}, erro
 	}
 	return sm.Secret, nil
 }
-
-//func (sm *SessionsJWTVer) Check(r *http.Request) (*Session, error) {
-//
-//}
 
 func (sm *SessionsJWTVer) Check(ctx context.Context, token string) (*Session, error) {
 	payload := &SessionJWTVerClaims{}

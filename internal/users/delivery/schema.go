@@ -1,6 +1,6 @@
 package delivery
 
-import "user_service/internal/users"
+import "github.com/Ollub/user_service/internal/users"
 
 type LoginResp struct {
 	Token  string `json:"token"`

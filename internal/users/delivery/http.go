@@ -1,14 +1,15 @@
 package delivery
 
 import (
-	"github.com/gorilla/mux"
 	"net/http"
 	"strconv"
-	"user_service/internal/session"
-	"user_service/internal/users"
-	"user_service/internal/users/usecase"
-	"user_service/pkg/log"
-	"user_service/pkg/utils/http_utils"
+
+	"github.com/Ollub/user_service/internal/session"
+	"github.com/Ollub/user_service/internal/users"
+	"github.com/Ollub/user_service/internal/users/usecase"
+	"github.com/Ollub/user_service/pkg/log"
+	"github.com/Ollub/user_service/pkg/utils/http_utils"
+	"github.com/gorilla/mux"
 )
 
 type Handler struct {

@@ -2,8 +2,9 @@ package log
 
 import (
 	"context"
-	"github.com/sirupsen/logrus"
 	"net/http"
+
+	"github.com/sirupsen/logrus"
 )
 
 const (
@@ -91,7 +92,6 @@ func SetupLogger(level int) {
 	std.SetFormatter(&logrus.TextFormatter{
 		FullTimestamp: true,
 	})
-	//std.SetReportCaller(true)
 
 	Debug("Logger configured", Fields{"level": level})
 }
