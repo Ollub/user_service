@@ -10,8 +10,8 @@ const AutenticationHeader = "x-authentication-token"
 
 var (
 	noAuthUrls = map[string]struct{}{
-		"/register": {},
-		"/login":    {},
+		"/signup": {},
+		"/login":  {},
 	}
 )
 

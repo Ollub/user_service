@@ -18,3 +18,7 @@ coverage.out
 .idea
 
 vendor
+
+# Python
+__pycache__/
+.pytest_cache/

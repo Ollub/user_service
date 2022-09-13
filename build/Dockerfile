@@ -16,7 +16,6 @@ FROM debian:buster-slim
 WORKDIR /app
 COPY --from=build /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/
 COPY --from=build /go/src/user_service/bin/user_service /app/
-COPY --from=build /go/src/user_service/scripts/wait-for-it.sh /app/
 RUN chmod +x /app/*
 #EXPOSE 8080/tcp
 CMD /app/user_service

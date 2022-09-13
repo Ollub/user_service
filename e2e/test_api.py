@@ -5,7 +5,7 @@ from faker import Faker
 
 AUTH_HEADER = "x-authentication-token"
 BASE_URL = "http://localhost:8080"
-REGISTER_URL = f"{BASE_URL}/register"
+REGISTER_URL = f"{BASE_URL}/signup"
 LOGIN_URL = f"{BASE_URL}/login"
 USERS_URL = f"{BASE_URL}/users"
 

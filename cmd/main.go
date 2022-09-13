@@ -29,7 +29,7 @@ func NewServer(cfg config.Config) http.Server {
 
 	apiHandler := mux.NewRouter()
 
-	apiHandler.HandleFunc("/register", u.Register).Methods("POST")
+	apiHandler.HandleFunc("/signup", u.Register).Methods("POST")
 	apiHandler.HandleFunc("/login", u.Login).Methods("POST")
 	apiHandler.HandleFunc("/users", u.List).Methods("GET")
 	apiHandler.HandleFunc("/users/{id}", u.Update).Methods("PUT")
