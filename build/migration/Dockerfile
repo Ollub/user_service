@@ -1,0 +1,5 @@
+FROM golang:1.18
+
+RUN go install github.com/pressly/goose/v3/cmd/goose@latest
+
+WORKDIR /migrations

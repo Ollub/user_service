@@ -1,0 +1,33 @@
+### Create user
+POST http://localhost:8080/register
+Content-Type: application/json
+
+{
+  "firstName": "John",
+  "lastName": "Doe",
+  "password": "123ABCabc!!!",
+  "email": "oo@oo121.com"
+}
+
+> {%
+    client.test("Request executed successfully", function() {
+        client.assert(response.status === 201, "Response status is not 201");
+    });
+%}
+
+###
+GET http://localhost:8080/users
+Accept: application/json
+x-authentication-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjEsImV4cCI6MTY3MDgxMDk4NywianRpIjoiQWpXd2hUSGN0Y3VBeGh4S1FGRGFGcExTakZiY1hvRUYiLCJpYXQiOjE2NjMwMzQ5ODd9.ADeqTk170lis9CzyLeNinqw9Nag6-cotfsbEgEP3I2I
+###
+
+PUT http://localhost:8080/users/1
+Content-Type: application/json
+x-authentication-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjEsImV4cCI6MTY3MDgxMDk4NywianRpIjoiQWpXd2hUSGN0Y3VBeGh4S1FGRGFGcExTakZiY1hvRUYiLCJpYXQiOjE2NjMwMzQ5ODd9.ADeqTk170lis9CzyLeNinqw9Nag6-cotfsbEgEP3I2I
+
+{
+  "firstName": "Oleg",
+  "lastName": "Doe"
+}
+
+###
